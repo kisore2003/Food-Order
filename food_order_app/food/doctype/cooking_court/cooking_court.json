@@ -1,0 +1,90 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-04-11 12:56:50.094029",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "customer_name",
+  "column_break_i7p80",
+  "rate",
+  "section_break_2hids",
+  "column_break_a3dcu",
+  "status",
+  "section_break_ifm00",
+  "food_order",
+  "confirm_order"
+ ],
+ "fields": [
+  {
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "label": "Customer Name"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status ",
+   "options": "Started\nNot Started\nCompleted"
+  },
+  {
+   "fieldname": "confirm_order",
+   "fieldtype": "Table",
+   "label": "Confirm Order",
+   "options": "Cooking Form"
+  },
+  {
+   "fieldname": "column_break_i7p80",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_a3dcu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_2hids",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "rate",
+   "fieldtype": "Int",
+   "label": "Rate"
+  },
+  {
+   "fieldname": "section_break_ifm00",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "food_order",
+   "fieldtype": "Link",
+   "label": "Food Order",
+   "options": "Food Order"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-04-14 11:21:11.522261",
+ "modified_by": "Administrator",
+ "module": "food",
+ "name": "Cooking Court",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

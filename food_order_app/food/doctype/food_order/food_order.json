@@ -1,0 +1,97 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "ERP__.#####",
+ "creation": "2025-04-11 12:04:28.678722",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "customer_name",
+  "rate",
+  "column_break_vojzy",
+  "status",
+  "section_break_87wel",
+  "column_break_5rqst",
+  "foods_details",
+  "section_break_5pnuo",
+  "column_break_qt1xu",
+  "total_quantity"
+ ],
+ "fields": [
+  {
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "label": "Customer Name"
+  },
+  {
+   "fieldname": "rate",
+   "fieldtype": "Int",
+   "label": "Rate"
+  },
+  {
+   "default": "Not Started",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Started\nNot Started\nCompleted"
+  },
+  {
+   "fieldname": "total_quantity",
+   "fieldtype": "Int",
+   "label": "Total Quantity"
+  },
+  {
+   "fieldname": "foods_details",
+   "fieldtype": "Table",
+   "label": "Foods Details",
+   "options": "Child Food"
+  },
+  {
+   "fieldname": "column_break_vojzy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_5rqst",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_87wel",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_qt1xu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_5pnuo",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-04-14 11:37:35.090710",
+ "modified_by": "Administrator",
+ "module": "food",
+ "name": "Food Order",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
