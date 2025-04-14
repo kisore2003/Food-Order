@@ -5,7 +5,7 @@ import traceback
 from frappe.model.document import Document
 
 class CookingCourt(Document):
-    def after_save(self):
+    def trigger(self):
         frappe.msgprint("after_save triggered")  # Debug
         self.update_food_order()
 
