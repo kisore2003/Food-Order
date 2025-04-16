@@ -9,15 +9,17 @@
  "engine": "InnoDB",
  "field_order": [
   "customer_name",
-  "rate",
+  "date",
   "column_break_vojzy",
   "status",
   "section_break_87wel",
   "column_break_5rqst",
   "foods_details",
-  "section_break_5pnuo",
-  "column_break_qt1xu",
-  "total_quantity"
+  "section_break_jpqja",
+  "total_quantity",
+  "section_break_uccxx",
+  "column_break_lowrv",
+  "total_rates"
  ],
  "fields": [
   {
@@ -26,16 +28,12 @@
    "label": "Customer Name"
   },
   {
-   "fieldname": "rate",
-   "fieldtype": "Int",
-   "label": "Rate"
-  },
-  {
    "default": "Not Started",
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
-   "options": "Started\nNot Started\nCompleted"
+   "options": "Started\nNot Started\nCompleted",
+   "read_only": 1
   },
   {
    "fieldname": "total_quantity",
@@ -61,17 +59,32 @@
    "fieldtype": "Section Break"
   },
   {
-   "fieldname": "column_break_qt1xu",
+   "fieldname": "total_rates",
+   "fieldtype": "Data",
+   "label": "Total Rates",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_jpqja",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_uccxx",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_lowrv",
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "section_break_5pnuo",
-   "fieldtype": "Section Break"
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-04-14 11:37:35.090710",
+ "modified": "2025-04-15 20:53:56.818422",
  "modified_by": "Administrator",
  "module": "food",
  "name": "Food Order",

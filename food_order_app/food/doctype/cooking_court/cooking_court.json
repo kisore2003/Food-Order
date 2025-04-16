@@ -9,7 +9,7 @@
  "field_order": [
   "customer_name",
   "column_break_i7p80",
-  "rate",
+  "date",
   "section_break_2hids",
   "column_break_a3dcu",
   "status",
@@ -48,11 +48,6 @@
    "fieldtype": "Section Break"
   },
   {
-   "fieldname": "rate",
-   "fieldtype": "Int",
-   "label": "Rate"
-  },
-  {
    "fieldname": "section_break_ifm00",
    "fieldtype": "Section Break"
   },
@@ -61,11 +56,16 @@
    "fieldtype": "Link",
    "label": "Food Order",
    "options": "Food Order"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-04-14 11:21:11.522261",
+ "modified": "2025-04-15 20:51:56.659266",
  "modified_by": "Administrator",
  "module": "food",
  "name": "Cooking Court",
