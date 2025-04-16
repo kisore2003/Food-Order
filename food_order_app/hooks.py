@@ -116,32 +116,32 @@ app_license = "MIT"
 # ---------------
 # Hook on document methods and events
 
-doc_events = {
-    "Material Request":{
-        "on_submit":"food_order_app.mat.test"
-    }
-}
+#doc_events = {
+#    "Material Request":{
+#        "on_submit":"food_order_app.mat.test"
+#    }
+#}
 
 # Scheduled Tasks
 # ---------------
 
-#scheduler_events = {
+scheduler_events = {
 # 	"all": [
-#         "food_order_app.tasks.run_every_minute"
-# 	],
+ #        "food_order_app.mat.auto_create"
+#	],
 # 	"daily": [
 # 		"food_order_app.tasks.daily"
 # 	],
-# 	"hourly": [
-# 		"food_order_app.tasks.hourly"
-# 	],
+	"hourly": [
+        "food_order_app.mat.auto_create"
+	],
 # 	"weekly": [
 # 		"food_order_app.tasks.weekly"
 # 	],
 # 	"monthly": [
 # 		"food_order_app.tasks.monthly"
 # 	],
-# }
+ }
 
 # Testing
 # -------
