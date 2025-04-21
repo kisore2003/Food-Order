@@ -14,8 +14,6 @@ class CookingCourt(Document):
             return
 
         try:
-            frappe.msgprint(f"🔗 Linked Food Order: {self.food_order}")
-
             food_order = frappe.get_doc("Food Order", self.food_order)
             if food_order.status != self.status:
                 old_status = food_order.status

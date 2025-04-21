@@ -38,8 +38,7 @@ frappe.ui.form.on('Child Food', {
                 }
             });
         }
-    },
-    rate: function(frm) {
+    },  rate: function(frm) {
         let total_rates=0; 
         frm.doc.foods_details.forEach(function(row) {
             let r = parseFloat(row.rate);
@@ -63,4 +62,14 @@ foods_details_remove:function(frm){
 
     }
 });
-
+frappe.ui.form.on('Food Order', {
+    refresh: function(frm) {
+        frm.set_query("d3", "foods_details", function(doc, cdt, cdn) {
+            return {
+                filters: {
+                    item_group:"Food"
+                }
+            };
+        });
+    }
+});

@@ -22,7 +22,7 @@ class FoodOrder(Document):
             })
 
         new_doc.save(ignore_permissions=True)
-        frappe.msgprint("✅ Cooking Court created and linked!")
+        frappe.msgprint(" Cooking Court created and linked!")
 
     
     
