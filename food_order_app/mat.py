@@ -2,18 +2,6 @@ import frappe
 from frappe.utils import nowdate
 
 
-#def Emailcreate():
-#    users = frappe.db.get_all("EmailExample", fields=["name1", "email"])  
-#    for user in users:
-#        if user.email:
-#            frappe.sendmail(
-#                recipients=user.email,
-#                subject="Daily Reminder",
-#                message=f"Hi {user.name1},\n\nThis is your daily reminder from the system.\n\nRegards,\nFrappe Team"
- #           )
- #   frappe.log_error("Daily reminder sent to all users", "Scheduler Log")
-
-
 #def test(doc, method):
 #    if doc.material_request_type != "Purchase":
 #        return  
@@ -27,16 +15,15 @@ from frappe.utils import nowdate
 #            "item_code": item.item_code,
 #            "schedule_date":item.schedule_date,
 #            "qty": item.qty,
- #           "rate": item.rate or 0,
-  #          "warehouse": item.warehouse,
- #           "material_request": doc.name,
-  #          "material_request_item": item.name
-   #     })
+#            "rate": item.rate or 0,
+#            "warehouse": item.warehouse,
+#            "material_request": doc.name,
+#            "material_request_item": item.name
+#        })
 
- #   po.insert(ignore_permissions=True)
-  #  po.submit()
-
-   # frappe.msgprint(f"Purchase Order {po.name} created from Material Request",title="Success", indicator="green")
+#    po.insert(ignore_permissions=True)
+#    po.submit()
+ #   frappe.msgprint(f"Purchase Order {po.name} created from Material Request",title="Success", indicator="green")
 
 
 

@@ -20,8 +20,7 @@ class FoodOrder(Document):
                 "foods": item.d3,
                 "qty": item.qty
             })
-
-        new_doc.save(ignore_permissions=True)
+        new_doc.save()
         frappe.msgprint(" Cooking Court created and linked!")
 
     

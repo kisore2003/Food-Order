@@ -1,0 +1,159 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-04-29 15:21:34.149183",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "series",
+  "project_name",
+  "status",
+  "project_type",
+  "is_active",
+  "_complete_method",
+  "column_break_2s21w",
+  "from_template",
+  "expected_start_date",
+  "expected_end_date",
+  "priority",
+  "department",
+  "customer_details_section",
+  "column_break_kdzkm",
+  "customer",
+  "column_break_vx6h3",
+  "sales_order",
+  "notes_section",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "series",
+   "fieldtype": "Data",
+   "label": "Series"
+  },
+  {
+   "fieldname": "project_name",
+   "fieldtype": "Data",
+   "label": "Project Name"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Open\nCompleted\nCancelled"
+  },
+  {
+   "fieldname": "project_type",
+   "fieldtype": "Select",
+   "label": "Project Type",
+   "options": "External\nInternal\nOther"
+  },
+  {
+   "fieldname": "is_active",
+   "fieldtype": "Select",
+   "label": "Is Active",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "_complete_method",
+   "fieldtype": "Select",
+   "label": "% Complete Method",
+   "options": "Manual\nTask Completion\nTask Progress\nTask Weight"
+  },
+  {
+   "fieldname": "column_break_2s21w",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "from_template",
+   "fieldtype": "Link",
+   "label": "From Template",
+   "options": "Project Template"
+  },
+  {
+   "fieldname": "expected_start_date",
+   "fieldtype": "Date",
+   "label": "Expected Start Date"
+  },
+  {
+   "fieldname": "expected_end_date",
+   "fieldtype": "Date",
+   "label": "Expected End Date"
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "label": "Priority",
+   "options": "Medium\nHigh\nLow"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Select",
+   "label": "Department",
+   "options": "Accounts\nHr\nSales\nPurchase\nProduction"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "customer_details_section",
+   "fieldtype": "Section Break",
+   "label": "Customer Details"
+  },
+  {
+   "fieldname": "column_break_kdzkm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "column_break_vx6h3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sales_order",
+   "fieldtype": "Link",
+   "label": "Sales Order",
+   "options": "Sales Order"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "notes_section",
+   "fieldtype": "Section Break",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text Editor",
+   "label": "Notes"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-04-29 18:09:03.268156",
+ "modified_by": "Administrator",
+ "module": "Project Orders",
+ "name": "Project Order",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

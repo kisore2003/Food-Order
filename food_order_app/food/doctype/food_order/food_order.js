@@ -3,13 +3,12 @@
 
 
 frappe.ui.form.on('Child Food', { 
-    qty: function (frm) {
+    qty: function (frm){
         let total_quantity = 0;
 
         frm.doc.foods_details.forEach(function (row) {
             total_quantity += row.qty
         });
-
         frm.set_value('total_quantity', total_quantity);
     },
     foods_details_remove:function(frm){
@@ -26,9 +25,9 @@ frappe.ui.form.on('Child Food', {
         if (row.d3) {
             frappe.call({
                 method: "frappe.client.get_value",
-                args: {
+                args:{
                     doctype: "Item",  
-                    filters: { name: row.d3 }, 
+                    filters: { name: row.d3}, 
                     fieldname: "custom_food_rate" 
                 },
                 callback: function(r) {
@@ -40,7 +39,7 @@ frappe.ui.form.on('Child Food', {
         }
     },  rate: function(frm) {
         let total_rates=0; 
-        frm.doc.foods_details.forEach(function(row) {
+        frm.doc.foods_details.forEach(function(row){
             let r = parseFloat(row.rate);
             if (!isNaN(r)) {
                 total_rates += r;
@@ -64,7 +63,7 @@ foods_details_remove:function(frm){
 });
 frappe.ui.form.on('Food Order', {
     refresh: function(frm) {
-        frm.set_query("d3", "foods_details", function(doc, cdt, cdn) {
+        frm.set_query("d3", "foods_details", function() {
             return {
                 filters: {
                     item_group:"Food"
