@@ -19,7 +19,8 @@
   "total_quantity",
   "section_break_uccxx",
   "column_break_lowrv",
-  "total_rates"
+  "total_rates",
+  "purchase_order"
  ],
  "fields": [
   {
@@ -80,11 +81,16 @@
    "fieldname": "date",
    "fieldtype": "Date",
    "label": "Date"
+  },
+  {
+   "fieldname": "purchase_order",
+   "fieldtype": "Link",
+   "options": "Purchase Order"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-04-15 20:53:56.818422",
+ "modified": "2025-05-19 16:51:13.227118",
  "modified_by": "Administrator",
  "module": "food",
  "name": "Food Order",

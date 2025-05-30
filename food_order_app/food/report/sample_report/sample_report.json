@@ -1,0 +1,39 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "creation": "2025-04-30 12:03:33.131433",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [
+  {
+   "default": "Started",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "mandatory": 0,
+   "options": "Started\nNot Started\nCompleted",
+   "wildcard_filter": 0
+  }
+ ],
+ "idx": 0,
+ "is_standard": "Yes",
+ "json": "{}",
+ "letter_head": "tASK",
+ "modified": "2025-04-30 17:39:04.064517",
+ "modified_by": "Administrator",
+ "module": "food",
+ "name": "Sample Report",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "SELECT \r\n    fo.customer_name AS \"Customer Name\",\r\n    fo.date AS \"Date\",\r\n    fo.status AS \"Status\",\r\n    fo.total_quantity AS \"Total Quantity\",\r\n    fo.total_rates AS \"Total Rates\",\r\n    fo.name AS \"Doc Id\",\r\n    cf.project_name AS \"Project Name\",\r\n    cf.expected_start_date AS \"Expected Start Date\"\r\nFROM `tabFood Order` fo\r\nJOIN `tabProject Order` cf \r\nORDER BY fo.total_quantity ASC\r\n",
+ "ref_doctype": "Food Order",
+ "report_name": "Sample Report",
+ "report_type": "Query Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  }
+ ]
+}

@@ -1,0 +1,41 @@
+{
+ "cards": [
+  {
+   "card": "Document"
+  },
+  {
+   "card": "Cooking"
+  }
+ ],
+ "chart_options": "{\r\n  \"xAxisMode\": \"tick\",\r\n  \"yAxisMode\": \"span\",\r\n  \"colors\": [\"#21BA45\", \"#FF5858\"]\r\n}",
+ "charts": [
+  {
+   "chart": "Food Order",
+   "width": "Full"
+  },
+  {
+   "chart": "Status report",
+   "width": "Half"
+  },
+  {
+   "chart": "Group By",
+   "width": "Half"
+  },
+  {
+   "chart": "Food Order-1",
+   "width": "Half"
+  }
+ ],
+ "creation": "2025-05-04 11:23:22.091160",
+ "dashboard_name": "Demo",
+ "docstatus": 0,
+ "doctype": "Dashboard",
+ "idx": 0,
+ "is_default": 1,
+ "is_standard": 1,
+ "modified": "2025-05-11 20:05:52.300849",
+ "modified_by": "Administrator",
+ "module": "food",
+ "name": "Demo",
+ "owner": "Administrator"
+}

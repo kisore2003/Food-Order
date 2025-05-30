@@ -1,0 +1,32 @@
+{
+ "chart_name": "Status report",
+ "chart_type": "Report",
+ "creation": "2025-05-04 11:25:54.484428",
+ "docstatus": 0,
+ "doctype": "Dashboard Chart",
+ "dynamic_filters_json": "{}",
+ "filters_json": "{\"status\":\"Started\"}",
+ "group_by_type": "Count",
+ "idx": 0,
+ "is_public": 1,
+ "is_standard": 1,
+ "modified": "2025-05-04 11:25:54.484428",
+ "modified_by": "Administrator",
+ "module": "food",
+ "name": "Status report",
+ "number_of_groups": 0,
+ "owner": "Administrator",
+ "report_name": "Sample Report",
+ "roles": [],
+ "time_interval": "Yearly",
+ "timeseries": 0,
+ "timespan": "Last Year",
+ "type": "Line",
+ "use_report_chart": 0,
+ "x_field": "customer_name",
+ "y_axis": [
+  {
+   "y_field": "total_quantity"
+  }
+ ]
+}

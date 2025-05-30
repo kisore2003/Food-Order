@@ -1,0 +1,45 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "creation": "2025-04-30 16:47:49.854218",
+ "disable_prepared_report": 1,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [
+  {
+   "default": "Today",
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "label": "From Date",
+   "mandatory": 0,
+   "wildcard_filter": 0
+  },
+  {
+   "default": "Today",
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date",
+   "mandatory": 0,
+   "wildcard_filter": 0
+  }
+ ],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letter_head": "tASK",
+ "modified": "2025-05-01 16:37:57.954132",
+ "modified_by": "Administrator",
+ "module": "food",
+ "name": "Food Order Report",
+ "owner": "Administrator",
+ "prepared_report": 1,
+ "query": "SELECT s.customer_name AS \"Customer Name\",\ns.date AS \"Date\",\ns.status AS \"Status\",\na.d3 AS \"Food\"\nFROM `tabFood Order` s\nJOIN `tabChild Food` a ON a.parent=s.name\nWHERE s.date>=%(from_date)s AND s.date<=%(end_date)s\n",
+ "ref_doctype": "Food Order",
+ "report_name": "Food Order Report",
+ "report_type": "Query Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  }
+ ]
+}

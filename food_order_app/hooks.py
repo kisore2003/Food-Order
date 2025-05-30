@@ -28,7 +28,10 @@ app_license = "MIT"
 
 # include js in doctype views
 # doctype_js = {"doctype" : "public/js/doctype.js"}
-# doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
+
+doctype_list_js = { 
+     "Material Request":"public/js/listview.js"
+     }
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
 
@@ -62,7 +65,7 @@ app_license = "MIT"
 # ------------
 
 # before_install = "food_order_app.install.before_install"
-# after_install = "food_order_app.install.after_install"
+# \after_install = "food_order_app.install.after_install"
 
 # Uninstallation
 # ------------
@@ -116,32 +119,37 @@ app_license = "MIT"
 # ---------------
 # Hook on document methods and events
 
-#doc_events = {
+doc_events = {
+  #
 #   "Material Request":{
 #        "on_submit":"food_order_app.mat.test"
-#    }
-#}
+  #  },
+  "Purchase Order":{
+      "on_update":"food_order_app.events.purchase_order.workflow"
+  }
+  
+}
 
 # Scheduled Tasks
 # ---------------
 
-scheduler_events = {
-    "hourly": [
-        "food_order_app.mat.auto_create"
-	],
-	"all": [
-        "food_order_app.mat.Emailcreate"
-	],
- 	"daily": [
- 		"food_order_app.tasks.daily"
- 	],
- 	"weekly": [
- 		"food_order_app.tasks.weekly"
- 	],
- 	"monthly": [
- 		"food_order_app.tasks.monthly"
- 	],
- }
+#scheduler_events = {
+#    "hourly": [
+#        "food_order_app.mat.auto_create"
+#	],
+#	"all": [
+ #       "food_order_app.mat.Emailcreate"
+#	],
+ #	"daily": [
+ #		"food_order_app.tasks.daily"
+ #	],
+ #	"weekly": [
+ #		"food_order_app.tasks.weekly"
+ #	],
+ #	"monthly": [
+ #		"food_order_app.tasks.monthly"
+ #	],
+ #}
 
 # Testing
 # -------
@@ -158,9 +166,9 @@ scheduler_events = {
 # each overriding function accepts a `data` argument;
 # generated from the base implementation of the doctype dashboard,
 # along with any modifications made in other Frappe apps
-# override_doctype_dashboards = {
-# 	"Task": "food_order_app.task.get_dashboard_data"
-# }
+override_doctype_dashboards = {
+    "Task":"food_order_app.events.task.get_dash_board_data",
+}
 
 # exempt linked doctypes from being automatically cancelled
 #
@@ -211,3 +219,8 @@ scheduler_events = {
 # auth_hooks = [
 # 	"food_order_app.auth.validate"
 # ]
+
+fixtures = [
+    {'dt':'Custom Field','filters': [['module','=','food_order_app']]},
+    {'dt':'Property Setter','filters': [['module','=','food_order_app']]}
+    ]

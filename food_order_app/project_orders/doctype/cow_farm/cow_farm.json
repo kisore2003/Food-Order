@@ -1,0 +1,74 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "FARM-.YYYY.-.MM.-.DD.-.####",
+ "creation": "2025-05-06 11:48:21.113925",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "name1",
+  "entry_date",
+  "today_date",
+  "total_days",
+  "details"
+ ],
+ "fields": [
+  {
+   "default": "Jersey Cow",
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "default": "2025-04-01",
+   "fieldname": "entry_date",
+   "fieldtype": "Date",
+   "label": "Entry Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "today_date",
+   "fieldtype": "Date",
+   "label": "Today Date"
+  },
+  {
+   "fieldname": "total_days",
+   "fieldtype": "Int",
+   "label": "Total Days"
+  },
+  {
+   "fieldname": "details",
+   "fieldtype": "Table",
+   "label": "Details",
+   "options": "FoodForCow"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-05-14 09:47:32.130054",
+ "modified_by": "Administrator",
+ "module": "Project Orders",
+ "name": "Cow Farm",
+ "name_case": "Title Case",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

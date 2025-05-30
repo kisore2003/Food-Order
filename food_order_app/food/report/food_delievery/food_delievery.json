@@ -1,0 +1,41 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "creation": "2025-05-05 10:52:07.708310",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [
+  {
+   "default": "Today",
+   "fieldname": "frm_date",
+   "fieldtype": "Date",
+   "label": "From Date",
+   "mandatory": 0,
+   "wildcard_filter": 0
+  },
+  {
+   "default": "Today",
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date",
+   "mandatory": 0,
+   "wildcard_filter": 0
+  }
+ ],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letter_head": "tASK",
+ "modified": "2025-05-05 11:36:57.636443",
+ "modified_by": "Administrator",
+ "module": "food",
+ "name": "Food Delievery",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "SELECT\r\n   f.name AS \"Order ID:Link/Food Order:120\",\r\n   f.customer_name AS \"Customer:Data:150\",\r\n   f.date AS \"Date:Date:100\",\r\n   c.rate AS \"Rate:Int:120\",\r\n   c.qty AS \"Qty:Int:80\"\r\nFROM\r\n   `tabFood Order` f\r\nLEFT JOIN\r\n   `tabChild Food` c ON c.parent = f.name\r\nWHERE\r\n   f.date >= %(frm_date)s AND f.date <= %(end_date)s\r\nORDER BY\r\n   f.date ASC\r\n",
+ "ref_doctype": "Food Order",
+ "report_name": "Food Delievery",
+ "report_type": "Query Report",
+ "roles": []
+}
