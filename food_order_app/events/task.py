@@ -1,21 +1,22 @@
 import frappe
 from frappe import _
+def get_dashboard_data(data):
+    data["transactions"].extend([
+        {
+            "label": _("Purchase"),
+            "items": ["Purchase Order", "Purchase Invoice"]
+        }
+    ])
 
-def get_dash_board_data(data):
-    data["transactions"].append({
-        "label": _("Purchase Orders"),
-        "items": [
-            {
-                "type": "route",
-                "name": "Purchase Orders with Item Filter",
-                "label": _("Purchase Orders (filtered by items)"),
-                "route": "/app/purchase-order",
-                "route_options": {
-                    "filters": [
-                        ["items", "item_code", "!=", ""]
-                    ]
-                }
-            }
-        ]
+    data["fieldname"] = "project"
+
+
+    data.setdefault("non_standard_fieldnames",{})
+    data["non_standard_fieldnames"].update({
+        "Purchase Order": "project",
+        "Purchase Invoice": "project"
     })
+
     return data
+
+    

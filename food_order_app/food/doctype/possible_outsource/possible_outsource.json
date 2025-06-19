@@ -1,0 +1,52 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "OUT-.#####",
+ "creation": "2025-06-12 17:56:19.473458",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "possible_source",
+  "outsource_child"
+ ],
+ "fields": [
+  {
+   "fieldname": "possible_source",
+   "fieldtype": "Data",
+   "label": "Possible Source"
+  },
+  {
+   "fieldname": "outsource_child",
+   "fieldtype": "Table",
+   "label": "Outsource Child",
+   "options": "Outsource Child"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-06-12 17:59:43.827109",
+ "modified_by": "Administrator",
+ "module": "food",
+ "name": "Possible Outsource",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

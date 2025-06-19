@@ -1,0 +1,92 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-06-10 17:19:02.700860",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "name1",
+  "phone",
+  "purpose",
+  "checking_out",
+  "column_break_fhcq",
+  "check_in",
+  "chk_out",
+  "host",
+  "qr_code"
+ ],
+ "fields": [
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fieldname": "phone",
+   "fieldtype": "Phone",
+   "label": "Phone"
+  },
+  {
+   "fieldname": "purpose",
+   "fieldtype": "Data",
+   "label": "Purpose"
+  },
+  {
+   "fieldname": "check_in",
+   "fieldtype": "Datetime",
+   "label": "Check In"
+  },
+  {
+   "fieldname": "host",
+   "fieldtype": "Data",
+   "label": "Host"
+  },
+  {
+   "fieldname": "qr_code",
+   "fieldtype": "HTML",
+   "label": "Qr Code"
+  },
+  {
+   "fieldname": "column_break_fhcq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "No",
+   "fieldname": "checking_out",
+   "fieldtype": "Select",
+   "label": "Checking Out",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "chk_out",
+   "fieldtype": "Datetime",
+   "label": "Check Out"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-06-10 18:22:59.342937",
+ "modified_by": "Administrator",
+ "module": "Project Orders",
+ "name": "Visitor Form",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

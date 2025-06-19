@@ -105,8 +105,6 @@ def get_cs_data(filters):
         LEFT JOIN `tabChild Food` e ON e.parent=s.name
         WHERE 1=1 {conditions}
         ORDER BY date DESC 
-        
-      
     """
     return frappe.db.sql(query, values, as_dict=True)
 

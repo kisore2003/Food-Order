@@ -1,45 +1,49 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2025-04-11 12:50:12.180366",
+ "creation": "2025-06-02 11:12:58.820841",
  "doctype": "DocType",
- "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "d3",
-  "qty",
-  "rate"
+  "quantity",
+  "rate",
+  "tot",
+  "final_value"
  ],
  "fields": [
   {
-   "fieldname": "d3",
-   "fieldtype": "Link",
-   "label": "Foods",
-   "link_filters": "[[\"Item\",\"item_group\",\"=\",\"Food\"]]",
-   "options": "Item"
-  },
-  {
-   "fieldname": "qty",
+   "fieldname": "tot",
    "fieldtype": "Int",
    "in_list_view": 1,
-   "label": "Qty"
+   "label": "Tot"
+  },
+  {
+   "fieldname": "quantity",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Quantity"
   },
   {
    "fieldname": "rate",
    "fieldtype": "Int",
-   "in_standard_filter": 1,
-   "label": "Rate",
-   "read_only": 1
+   "in_list_view": 1,
+   "label": "Rate"
+  },
+  {
+   "fieldname": "final_value",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Final Value"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-06-10 15:14:53.401016",
+ "modified": "2025-06-07 19:44:11.573652",
  "modified_by": "Administrator",
  "module": "food",
- "name": "Child Food",
+ "name": "Demo",
  "owner": "Administrator",
  "permissions": [],
  "row_format": "Dynamic",

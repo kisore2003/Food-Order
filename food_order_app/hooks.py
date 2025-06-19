@@ -27,7 +27,10 @@ app_license = "MIT"
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-# doctype_js = {"doctype" : "public/js/doctype.js"}
+doctype_js = {
+    "Task":"public/js/taskdoctype.js",
+    "Location":"public/js/location.js"
+   }
 
 doctype_list_js = { 
      "Material Request":"public/js/listview.js"
@@ -119,15 +122,23 @@ doctype_list_js = {
 # ---------------
 # Hook on document methods and events
 
-doc_events = {
-  #
+doc_events={
+  
 #   "Material Request":{
 #        "on_submit":"food_order_app.mat.test"
   #  },
-  "Purchase Order":{
-      "on_update":"food_order_app.events.purchase_order.workflow"
+  #"Purchase Order":{
+   #   "on_update":"food_order_app.events.purchase_order.workflow"
+  #},
+ # "Sales Invoice":{
+  #    "on_submit":"food_order_app.events.sales.email"
+  #},
+  "ToDo":{
+      "validate":"food_order_app.events.todoo.todo_fetching"
+  },
+  "Task":{
+      "validate":"food_order_app.events.task_date.dateto_amr"
   }
-  
 }
 
 # Scheduled Tasks
@@ -166,9 +177,9 @@ doc_events = {
 # each overriding function accepts a `data` argument;
 # generated from the base implementation of the doctype dashboard,
 # along with any modifications made in other Frappe apps
-override_doctype_dashboards = {
-    "Task":"food_order_app.events.task.get_dash_board_data",
-}
+#override_doctype_dashboards = {
+ #   "Task":"food_order_app.events.task.get_dashboard_data",
+#}
 
 # exempt linked doctypes from being automatically cancelled
 #
@@ -220,7 +231,10 @@ override_doctype_dashboards = {
 # 	"food_order_app.auth.validate"
 # ]
 
-fixtures = [
-    {'dt':'Custom Field','filters': [['module','=','food_order_app']]},
-    {'dt':'Property Setter','filters': [['module','=','food_order_app']]}
-    ]
+# fixtures = [
+#      {'dt':'Custom Field','filters': [['module','=','food_order_app']]},
+#      {'dt':'Property Setter','filters': [['module','=','food_order_app']]}
+#      ]
+
+
+# bench --site new-site-name export fixtures

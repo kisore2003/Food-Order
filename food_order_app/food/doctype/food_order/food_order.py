@@ -29,3 +29,11 @@ class FoodOrder(Document):
 
 		
     #pass
+
+
+@frappe.whitelist()
+def get_food_rate(item_code):
+    rate = frappe.db.get_value("Item",item_code,"custom_food_rate")
+    
+    return rate
+    

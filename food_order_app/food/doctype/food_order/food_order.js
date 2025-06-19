@@ -24,20 +24,19 @@ frappe.ui.form.on('Child Food', {
         let row = locals[cdt][cdn]; 
         if (row.d3) {
             frappe.call({
-                method: "frappe.client.get_value",
+                // method: "frappe.client.get_value",
+                method:"food_order_app.food.doctype.food_order.food_order.get_food_rate",
                 args:{
-                    doctype: "Item",  
-                    filters: { name: row.d3}, 
-                    fieldname: "custom_food_rate" 
+                    item_code: row.d3
                 },
                 callback: function(r) {
                     if (r.message) {
-                        frappe.model.set_value(cdt, cdn, "rate", r.message.custom_food_rate);
+                        frappe.model.set_value(cdt, cdn, "rate", r.message);
                     }
                 }
             });
         }
-    },  rate: function(frm) {
+    }, rate: function(frm) {
         let total_rates=0; 
         frm.doc.foods_details.forEach(function(row){
             let r = parseFloat(row.rate);

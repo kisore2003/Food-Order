@@ -1,0 +1,101 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-06-05 17:00:00.496647",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "inspected_from_date",
+  "inspected_to_date",
+  "machine_item_code",
+  "machine_item_name",
+  "column_break_blti",
+  "service_select_date",
+  "service_employee_details_section",
+  "machine_service_employee",
+  "item_service_checklist_section",
+  "items"
+ ],
+ "fields": [
+  {
+   "fieldname": "inspected_from_date",
+   "fieldtype": "Date",
+   "label": "Inspected From Date"
+  },
+  {
+   "fieldname": "inspected_to_date",
+   "fieldtype": "Date",
+   "label": "Inspected To Date"
+  },
+  {
+   "fieldname": "machine_item_code",
+   "fieldtype": "Link",
+   "label": "Machine Item Code",
+   "options": "Asset"
+  },
+  {
+   "fieldname": "machine_item_name",
+   "fieldtype": "Link",
+   "label": "Machine Item Name",
+   "options": "Asset"
+  },
+  {
+   "fieldname": "service_select_date",
+   "fieldtype": "Select",
+   "label": "Service Select Date",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "column_break_blti",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "service_employee_details_section",
+   "fieldtype": "Section Break",
+   "label": "Service Employee Details"
+  },
+  {
+   "fieldname": "machine_service_employee",
+   "fieldtype": "Table",
+   "label": "Machine Service Employee",
+   "options": "Machine Service Employee"
+  },
+  {
+   "fieldname": "item_service_checklist_section",
+   "fieldtype": "Section Break",
+   "label": "Item Service Checklist"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Items",
+   "options": "Item Service Checklist"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-06-05 17:11:23.597392",
+ "modified_by": "Administrator",
+ "module": "Project Orders",
+ "name": "Machine Service Checklist",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
