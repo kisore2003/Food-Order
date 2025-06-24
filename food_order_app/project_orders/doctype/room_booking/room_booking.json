@@ -1,0 +1,87 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{purpose}-{#####}",
+ "creation": "2025-06-24 11:56:30.982084",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "room",
+  "time_slot",
+  "column_break_8qzl",
+  "purpose",
+  "section_break_kapa",
+  "organizer",
+  "column_break_ubei",
+  "status"
+ ],
+ "fields": [
+  {
+   "fieldname": "room",
+   "fieldtype": "Data",
+   "label": "Room"
+  },
+  {
+   "fieldname": "time_slot",
+   "fieldtype": "Time",
+   "label": "Time Slot"
+  },
+  {
+   "fieldname": "purpose",
+   "fieldtype": "Data",
+   "label": "Purpose"
+  },
+  {
+   "fieldname": "organizer",
+   "fieldtype": "Link",
+   "label": "Organizer",
+   "options": "User"
+  },
+  {
+   "fieldname": "column_break_8qzl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nConfirmed\nCancel"
+  },
+  {
+   "fieldname": "section_break_kapa",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_ubei",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_calendar_and_gantt": 1,
+ "links": [],
+ "modified": "2025-06-24 15:22:30.686950",
+ "modified_by": "Administrator",
+ "module": "Project Orders",
+ "name": "Room Booking",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

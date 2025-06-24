@@ -1,0 +1,141 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{estimation_date}-{####}",
+ "creation": "2025-06-20 10:14:11.093140",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "job_title",
+  "column_break_8g37",
+  "customer",
+  "section_break_is3m",
+  "estimation_date",
+  "column_break_jjhg",
+  "status",
+  "section_break_3lnq",
+  "estimation",
+  "section_break_mgc4",
+  "total_material_cost",
+  "column_break_rzrd",
+  "total_labour_cost",
+  "section_break_gu3m",
+  "total_service_cost",
+  "column_break_etyo",
+  "total_estimated_cost"
+ ],
+ "fields": [
+  {
+   "fieldname": "job_title",
+   "fieldtype": "Data",
+   "label": "Job Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "estimation_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Estimation Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "total_material_cost",
+   "fieldtype": "Currency",
+   "label": "Total Material Cost"
+  },
+  {
+   "fieldname": "total_labour_cost",
+   "fieldtype": "Currency",
+   "label": "Total Labour Cost"
+  },
+  {
+   "fieldname": "total_service_cost",
+   "fieldtype": "Currency",
+   "label": "Total Service Cost"
+  },
+  {
+   "fieldname": "total_estimated_cost",
+   "fieldtype": "Currency",
+   "label": "Total Estimated Cost",
+   "read_only": 1
+  },
+  {
+   "fieldname": "estimation",
+   "fieldtype": "Table",
+   "label": "Estimation",
+   "options": "Estimation Details"
+  },
+  {
+   "fieldname": "section_break_is3m",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_8g37",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_etyo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_gu3m",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_mgc4",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_rzrd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nSubmitted\nApproved\nRejected\nCancel"
+  },
+  {
+   "fieldname": "section_break_3lnq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_jjhg",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-06-23 10:17:47.738546",
+ "modified_by": "Administrator",
+ "module": "Project Orders",
+ "name": "Job Estimation",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
